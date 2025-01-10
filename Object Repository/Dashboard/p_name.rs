@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>p_name</name>
+   <tag></tag>
+   <elementGuidId>da94de25-2503-4a73-900c-dd6701ebe4c4</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='root']/div[2]/div/div/div/div[2]/div/div[2]/p</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>p.MuiTypography-root.MuiTypography-body1._title_xk5is_23.css-1myr9cp</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>p</value>
+      <webElementGuid>eeb6a1f2-4e9c-4b5f-816f-df46fd6e5a86</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>MuiTypography-root MuiTypography-body1 _title_xk5is_23 css-1myr9cp</value>
+      <webElementGuid>4bc3fa0e-13cf-4bbc-8fb3-92ea1ad06072</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>siva prasad2</value>
+      <webElementGuid>b615de20-0330-4f33-b585-2cff96df8344</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;_headerContainer_1x5uc_1&quot;]/div[@class=&quot;MuiContainer-root MuiContainer-disableGutters css-jj1crp&quot;]/div[@class=&quot;MuiBox-root css-n9yb05&quot;]/div[@class=&quot;MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 _header_1x5uc_1 css-kqf5nf&quot;]/div[@class=&quot;MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-md-4 css-kymykv&quot;]/div[@class=&quot;_cardContainer_xk5is_6&quot;]/div[@class=&quot;_nameContainer_xk5is_17&quot;]/p[@class=&quot;MuiTypography-root MuiTypography-body1 _title_xk5is_23 css-1myr9cp&quot;]</value>
+      <webElementGuid>118ecc89-7922-4d16-a3fa-4c15805602ca</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div[2]/div/div/div/div[2]/div/div[2]/p</value>
+      <webElementGuid>08b21a28-ce73-433d-9498-9d4fcf71f888</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Keep track of new contests, your referral stats, and more.'])[1]/preceding::p[5]</value>
+      <webElementGuid>30f339ef-b3c0-4b23-a77a-714b747e51da</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='siva prasad2']/parent::*</value>
+      <webElementGuid>0086b429-3da5-425a-a2e8-bbc303abfad6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//p</value>
+      <webElementGuid>acbbb4c5-f329-4791-87fc-7a4ce1321e63</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//p[(text() = 'siva prasad2' or . = 'siva prasad2')]</value>
+      <webElementGuid>10516350-6ac3-4bc2-9bc7-829612484376</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_Help</name>
+   <tag></tag>
+   <elementGuidId>5c4c021f-816d-4ea4-b944-004a088f70f2</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='root']/div[3]/div/center/div/div[2]/div[4]/div/div</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>1f586f0b-06dc-46a3-8116-9fb66cceadbe</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>card py-8 px-8 max-w-sm mx-auto space-y-2 bg-white rounded-xl shadow-lg items-center sm:space-y-0 sm:gap-x-6</value>
+      <webElementGuid>67056d6e-b1cb-49ef-9a7f-dd2784cb4542</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Help</value>
+      <webElementGuid>eea0e0c6-8081-4eca-8b1a-5d9a4900ba5b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;MuiContainer-root MuiContainer-disableGutters dashboard css-jj1crp&quot;]/div[@class=&quot;MuiContainer-root MuiContainer-maxWidthLg boxContainer css-1gvdw8w&quot;]/center[1]/div[@class=&quot;tilesBox MuiBox-root css-n9yb05&quot;]/div[@class=&quot;MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1klpoq2&quot;]/div[@class=&quot;MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-lg-4 MuiGrid2-grid-xs-6 css-1is2k5f&quot;]/div[@class=&quot;custom-col&quot;]/div[@class=&quot;card py-8 px-8 max-w-sm mx-auto space-y-2 bg-white rounded-xl shadow-lg items-center sm:space-y-0 sm:gap-x-6&quot;]</value>
+      <webElementGuid>515bca10-2ae6-45ce-a06a-a3718ca94b0e</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div[3]/div/center/div/div[2]/div[4]/div/div</value>
+      <webElementGuid>53842801-d99f-4cfc-b3a3-36aba7b3541b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Keep track of new contests, your referral stats, and more.'])[1]/following::div[16]</value>
+      <webElementGuid>093ec7b1-a271-4764-a3c7-3cbc9e7215e5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Capture object:'])[1]/preceding::div[11]</value>
+      <webElementGuid>fd8586b6-e9b5-466b-a159-1599fc2713f3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Alt'])[1]/preceding::div[11]</value>
+      <webElementGuid>af94652d-3ee3-410e-ad12-3da6c33258b6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[4]/div/div</value>
+      <webElementGuid>01e2d6d8-082d-4344-a89e-a3d996b0d11b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'Help' or . = 'Help')]</value>
+      <webElementGuid>bc60d95c-1165-483b-b1bc-d16591357127</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

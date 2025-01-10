@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_OTP has been sent to your registered mobile number</name>
+   <tag></tag>
+   <elementGuidId>c69c5846-c752-4a74-aec3-587f52f1ac0e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='root']/div[3]/div/div/div[2]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.formfield</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>816f8cd8-5c44-4c09-b48c-681121f1839a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>formfield</value>
+      <webElementGuid>40b51437-7f47-477e-a801-15c1e67d208a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>OTP has been sent to your registered mobile number</value>
+      <webElementGuid>6837893c-760d-4866-970b-1426ff6354c0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;background-col MuiBox-root css-0&quot;]/div[@class=&quot;MuiContainer-root MuiContainer-maxWidthXs container css-1ijkfjr&quot;]/div[@class=&quot;formBox MuiBox-root css-0&quot;]/div[@class=&quot;formfield&quot;]</value>
+      <webElementGuid>0c1d1e6c-7ec0-491f-83a0-06db40a7882c</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div[3]/div/div/div[2]</value>
+      <webElementGuid>96c6da09-37ff-43a0-9caa-f1c8c4f6ba60</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='OTP has been sent 8977942050 mobile number'])[1]/following::div[13]</value>
+      <webElementGuid>6ca91e0e-0c9d-407f-936b-a2422f329039</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='OTP *'])[1]/preceding::div[1]</value>
+      <webElementGuid>464efb21-f6e9-4783-a6b3-1f653e52154a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/div/div/div[2]</value>
+      <webElementGuid>77ba78b4-5ff1-41a3-88bf-766238448ac4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'OTP has been sent to your registered mobile number' or . = 'OTP has been sent to your registered mobile number')]</value>
+      <webElementGuid>feeb23b7-b97f-4baa-9c86-7e7fcaf1f6ef</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

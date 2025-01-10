@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>p_usertype</name>
+   <tag></tag>
+   <elementGuidId>6ef14e49-e560-4cc7-ac5c-71041ba82745</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='root']/div[2]/div/div/div/div[2]/div/div[2]/p[2]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>p.MuiTypography-root.MuiTypography-body1._subTitle_xk5is_31.css-fk05e1</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>p</value>
+      <webElementGuid>8f8d2468-f36b-4ff5-ae84-34463cc1eecd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>MuiTypography-root MuiTypography-body1 _subTitle_xk5is_31 css-fk05e1</value>
+      <webElementGuid>bcbe6f14-2fac-448c-b901-b2903b6b9e3d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>ISR dec 26</value>
+      <webElementGuid>9f32a366-ee18-492a-a9aa-cad2b6966b71</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;_headerContainer_1x5uc_1&quot;]/div[@class=&quot;MuiContainer-root MuiContainer-disableGutters css-jj1crp&quot;]/div[@class=&quot;MuiBox-root css-n9yb05&quot;]/div[@class=&quot;MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 _header_1x5uc_1 css-kqf5nf&quot;]/div[@class=&quot;MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-md-4 css-kymykv&quot;]/div[@class=&quot;_cardContainer_xk5is_6&quot;]/div[@class=&quot;_nameContainer_xk5is_17&quot;]/p[@class=&quot;MuiTypography-root MuiTypography-body1 _subTitle_xk5is_31 css-fk05e1&quot;]</value>
+      <webElementGuid>22b28699-9763-457a-967b-c8249e89654e</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div[2]/div/div/div/div[2]/div/div[2]/p[2]</value>
+      <webElementGuid>814cb4c1-b01e-445a-908d-d318484977fb</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Keep track of new contests, your referral stats, and more.'])[1]/preceding::p[4]</value>
+      <webElementGuid>08009a09-0fa7-4169-b762-ba7e325f5079</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='ISR dec 26']/parent::*</value>
+      <webElementGuid>32cf2a24-7565-492b-8adf-c9de9e050e9d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//p[2]</value>
+      <webElementGuid>6f0a49dd-e76f-4833-a64d-f86623291e92</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//p[(text() = 'ISR dec 26' or . = 'ISR dec 26')]</value>
+      <webElementGuid>cd6364c0-c665-4e21-951a-b033d8016412</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DoMemberRegistrationAndVerifyPointsAndDollarAmountAddedAsPerLeaderboardConfiguration</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8c480c83-1196-4288-9e6a-3da40f79ab56</testCaseGuid>
+</TestCaseEntity>

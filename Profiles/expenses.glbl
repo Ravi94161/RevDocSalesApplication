@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>expenses</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description>2.7.0</description>
+      <initValue>'bs://717fb23a4bf07e7eaded113399065edfa9fb01c0'</initValue>
+      <name>providerAppAndroid</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>2.7.0</description>
+      <initValue>'bs://0b61ed6c8bf09528b230c1fc498cae927add68cc'</initValue>
+      <name>memberAppAndroid</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'TR-0'</initValue>
+      <name>TestRunId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'expenses_gkna7o'</initValue>
+      <name>bsUserName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'YCVGzwZUexSELmAqjrMg'</initValue>
+      <name>bsAccessKey</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>p_statusTier</name>
+   <tag></tag>
+   <elementGuidId>97c563f0-a937-468c-8508-40aa9f9d8c81</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='root']/div[2]/div/div/div/div[2]/div/div[2]/div/p</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>p.MuiTypography-root.MuiTypography-body1._iconTag_xk5is_45.css-s148rk</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>p</value>
+      <webElementGuid>a62e1b43-0591-44f3-8011-60f527ecaf63</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>MuiTypography-root MuiTypography-body1 _iconTag_xk5is_45 css-s148rk</value>
+      <webElementGuid>8ca86be9-fa0c-43a0-a693-e5d17498927c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>isr dec 26 silver</value>
+      <webElementGuid>f894676a-f9a7-4040-9ed4-4228f513d381</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;_headerContainer_1x5uc_1&quot;]/div[@class=&quot;MuiContainer-root MuiContainer-disableGutters css-jj1crp&quot;]/div[@class=&quot;MuiBox-root css-n9yb05&quot;]/div[@class=&quot;MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 _header_1x5uc_1 css-kqf5nf&quot;]/div[@class=&quot;MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-md-4 css-kymykv&quot;]/div[@class=&quot;_cardContainer_xk5is_6&quot;]/div[@class=&quot;_nameContainer_xk5is_17&quot;]/div[@class=&quot;MuiBox-root css-1yae3jf&quot;]/p[@class=&quot;MuiTypography-root MuiTypography-body1 _iconTag_xk5is_45 css-s148rk&quot;]</value>
+      <webElementGuid>3cd5c11f-93f4-4c3c-b284-5089a9fe50f2</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div[2]/div/div/div/div[2]/div/div[2]/div/p</value>
+      <webElementGuid>8d5262ff-0669-49e7-84f0-7be3e87937c2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Keep track of new contests, your referral stats, and more.'])[1]/preceding::p[3]</value>
+      <webElementGuid>0a18c935-da89-4135-bc80-93e0b53044d8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='isr dec 26 silver']/parent::*</value>
+      <webElementGuid>9290a1f2-abac-44b4-9b82-127ce733dc52</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/p</value>
+      <webElementGuid>3609c87b-6cd1-4d3a-840a-5c53bf0b4f76</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//p[(text() = 'isr dec 26 silver' or . = 'isr dec 26 silver')]</value>
+      <webElementGuid>12de530c-9033-438b-a7c1-77aecfaad812</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
