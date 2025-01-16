@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>EarnDollars</name>
+   <name>pointsOnProfile</name>
    <tag></tag>
-   <elementGuidId>0a44b49d-191c-4f66-8039-5db9e44c998c</elementGuidId>
+   <elementGuidId>8b80e39b-d558-4b5d-b199-5081c1f3f665</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='item-pop-first MuiBox-root css-c3vlm2'][1]/div[3]/h6</value>
+         <value>//div[@class=&quot;MuiDialogContent-root css-1nbx5hx&quot;]/div/div/div/div[3]/p[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

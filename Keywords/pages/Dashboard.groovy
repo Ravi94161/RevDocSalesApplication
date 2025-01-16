@@ -1,50 +1,39 @@
 package pages
 
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
-
-import org.openqa.selenium.WebElement
 
 import com.kms.katalon.core.annotation.Keyword
-import com.kms.katalon.core.checkpoint.Checkpoint
-import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
-import com.kms.katalon.core.model.FailureHandling
-import com.kms.katalon.core.testcase.TestCase
-import com.kms.katalon.core.testdata.TestData
-import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
-import com.kms.katalon.core.webui.common.WebUiCommonHelper
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import com.kms.katalon.entity.checkpoint.ExcelCheckpointSourceInfo
 
-import internal.GlobalVariable
+import utility.Verify
 
 public class Dashboard {
 
 	int pointsValue;
 	String userName;
+	Verify verify = new Verify();
 
 	@Keyword
 	def clickOnLeaderboard() {
 
 		TestObject leaderboard = findTestObject('Object Repository/Dashboard/div_Leaderboard');
+		verify.verifyElementClickable(leaderboard, "Unable to click on leaderboard.....")
 		WebUI.click(leaderboard);
 	}
 
 	@Keyword
 	def clickOnContests() {
-		WebUI.click('Object Repository/Dashboard/div_Contests');
+		TestObject contest = findTestObject('Object Repository/Dashboard/div_Contests')
+		verify.verifyElementClickable(contest, "Unable to click on contest.....")
+		WebUI.click(contest);
 	}
 
 	@Keyword
 	def clickOnManage() {
-		WebUI.click('Object Repository/Dashboard/div_Manage');
+		TestObject manage = findTestObject('Object Repository/Dashboard/div_Manage')
+		verify.verifyElementClickable(manage, "Unable to click on manage.....")
+		WebUI.click(manage)
 	}
 
 	@Keyword
@@ -74,11 +63,8 @@ public class Dashboard {
 		println(firstName);
 		String userType = WebUI.getText(findTestObject('Object Repository/Dashboard/p_usertype'));
 
-		if(welcomeText.contains(firstName)) {
-			println("Welcome message is displayed correctly.....");
-		}else {
-			throw new Exception('Text "$firstName" is not present in the text "$welcomeText"');
-		}
+		verify.verifyTextContains(firstName, "name is not present in welcome text")
+		verify.verifyTextContains(userType, "usertype is not present in welcome text")
 	}
 
 	@Keyword
@@ -94,21 +80,19 @@ public class Dashboard {
 		String count = WebUI.getText(pointsCount);
 		pointsValue = count as int;
 		println(pointsValue);
-		GlobalVariable.leaderboardPoints=pointsValue;
+		//GlobalVariable.salesAppPoints=pointsValue;
+		return pointsValue;
 	}
 
 	@Keyword
-	def verifyPointsAddedForEvent() {
+	def verifyPointsAddedForEvent(String points) {
 
 		TestObject pointsCount = findTestObject('Object Repository/Dashboard/p_pointscount');
 		String count = WebUI.getText(pointsCount);
 		int pointsValueAfterEvent = count as int;
+		int pointsValueBeforeEvent = points as int;
 		println(pointsValueAfterEvent)
-		println(GlobalVariable.leaderboardPoints)
-		if(pointsValueAfterEvent == (GlobalVariable.leaderboardPoints+5)) {
-			println("points got added.....");
-		}else {
-			throw new Exception("Points are not added for the event.....");
-		}
+		println(pointsValueBeforeEvent)
+		verify.verifyIsEqual(pointsValueAfterEvent, pointsValueBeforeEvent, "Points are not added for the event.....")
 	}
 }

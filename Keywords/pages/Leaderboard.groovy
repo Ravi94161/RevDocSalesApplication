@@ -28,7 +28,7 @@ import internal.GlobalVariable
 
 public class Leaderboard {
 
-
+	Global global = new Global()
 
 	@Keyword
 	def getLeaderboardPoints() {
@@ -43,4 +43,11 @@ public class Leaderboard {
 
 	}
 
+	@Keyword
+	def clickOnHomeButton() {
+
+		TestObject homeLink = findTestObject('Object Repository/Dashboard/homeLink')
+		global.clickOnHomeButton(homeLink)
+
+	}
 }

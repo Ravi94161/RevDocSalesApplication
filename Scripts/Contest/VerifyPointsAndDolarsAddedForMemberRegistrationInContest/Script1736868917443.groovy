@@ -17,39 +17,57 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-//CustomKeywords.'driversPage.Switch.setWebBrowser'("memberRegistration")
 
-CustomKeywords.'pages.Login.launchSalesApplication'()
+CustomKeywords.'pages.Login.launchSalesApplication'(GlobalVariable.salesAppURL)
 
-CustomKeywords.'pages.Login.enterEmail'()
+CustomKeywords.'pages.Login.enterEmail'(GlobalVariable.salesUserEmail)
 
-CustomKeywords.'pages.Login.enterPassword'()
+CustomKeywords.'pages.Login.enterPassword'(GlobalVariable.salesUserPassword)
 
 CustomKeywords.'pages.Login.clickOnLoginButton'()
 
-CustomKeywords.'pages.Login.enterMobileNumber'()
+CustomKeywords.'pages.Login.enterMobileNumber'(GlobalVariable.salesUserMobileNumber)
 
 CustomKeywords.'pages.Login.clickOnSendOTP'()
 
-CustomKeywords.'pages.Login.enterOTP'()
+CustomKeywords.'pages.Login.enterOTP'(GlobalVariable.salesUserOTP)
 
 CustomKeywords.'pages.Login.clickOnVerifyOTPButton'()
 
 CustomKeywords.'pages.Dashboard.verifyWelcomeMessage'()
 
-CustomKeywords.'pages.Dashboard.getPointsCount'()
-
-CustomKeywords.'driversPage.Switch.getBrowserStackAndroidChromeDriver'("memberRegistration")
-
-CustomKeywords.'memberAppEvents.MemberApplictionEvents.memberRegistration'()
-
-Mobile.closeApplication()
-CustomKeywords.'pages.Dashboard.verifyPointsAddedForEvent'()
-
-CustomKeywords.'pages.Dashboard.clickOnLeaderboard'()
+CustomKeywords.'pages.Dashboard.clickOnContests'()
 
 CustomKeywords.'pages.Dashboard.clickOnTopBarProfile'()
 
-CustomKeywords.'pages.Profile.clickOnPayment'()
+int points = CustomKeywords.'pages.Profile.getPointsFromProfileTabStoreIt'()
 
+CustomKeywords.'pages.Profile.clickOnXButton'()
+
+CustomKeywords.'pages.Contest.clickOnHomeButton'()
+
+CustomKeywords.'driversPage.Switch.getBrowserStackAndroidChromeDriver'("memberRegistrationForContest")
+  
+CustomKeywords.'memberAppEvents.MemberApplictionEvents.memberRegistration'()
+  
+Mobile.closeApplication()
+
+CustomKeywords.'pages.Dashboard.clickOnContests'()
+
+CustomKeywords.'pages.Dashboard.clickOnTopBarProfile'()
+
+CustomKeywords.'pages.Profile.verifyPointsAddedAfterEvent'(points)
+  
+CustomKeywords.'pages.Profile.clickOnPayment'()
+  
 CustomKeywords.'pages.Profile.verifyRecordAddedToMonthlySales'()
+  
+CustomKeywords.'pages.Profile.clickOnXButton'()
+  
+CustomKeywords.'pages.Contest.clickOnHomeButton'()
+  
+CustomKeywords.'pages.Dashboard.clickOnManage'()
+  
+CustomKeywords.'pages.Manage.clickOnLogOut'()
+  
+CustomKeywords.'pages.Login.closeBrowser'()

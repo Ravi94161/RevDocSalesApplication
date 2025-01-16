@@ -5,9 +5,11 @@ import org.openqa.selenium.remote.RemoteWebDriver
 
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.configuration.RunConfiguration
+import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory
 import com.kms.katalon.core.webui.driver.DriverFactory
 
 import internal.GlobalVariable
+import io.appium.java_client.android.AndroidDriver
 
 
 
@@ -16,12 +18,12 @@ public class Switch {
 
 	static driver = null
 
-	@Keyword
-	def launchMobileDevice(deviceName = "Galaxy S23 Ultra", platformVersion = "13", grantPermission = false) {
-		RunConfiguration.setDriverPreferencesProperty('Remote',  "deviceName" , deviceName)
-		RunConfiguration.setDriverPreferencesProperty('Remote', "platformVersion", platformVersion)
-		RunConfiguration.setDriverPreferencesProperty('Remote', "autoGrantPermissions", grantPermission    )
-	}
+	/*@Keyword
+	 def launchMobileDevice(deviceName = "Galaxy S23 Ultra", platformVersion = "13", grantPermission = false) {
+	 RunConfiguration.setDriverPreferencesProperty('Remote',  "deviceName" , deviceName)
+	 RunConfiguration.setDriverPreferencesProperty('Remote', "platformVersion", platformVersion)
+	 RunConfiguration.setDriverPreferencesProperty('Remote', "autoGrantPermissions", grantPermission    )
+	 }*/
 
 	@Keyword
 	def setWebBrowser(String testCaseName){
@@ -58,6 +60,7 @@ public class Switch {
 
 		//caps.setCapability("browser", "Chrome")
 		caps.setCapability("real_mobile", true)
+		//caps.setCapability("buildIdentifier", ${DATE_TIME})
 
 		//To hide keyboard
 		caps.setCapability("unicodeKeyboard", true);
@@ -66,16 +69,16 @@ public class Switch {
 		caps.setCapability("app", GlobalVariable.memberAppAndroid)
 
 		caps.setCapability("project", "Sales")
-		caps.setCapability("build", "TestcaseID")
+		caps.setCapability("build", "SalesTest")
 		caps.setCapability("name", nameToDisplay)
 
 
-		//driver = new AndroidDriver(new URL("http://hub.browserstack.com/wd/hub"), caps);
-		//MobileDriverFactory.setDriver(driver)
+		driver = new AndroidDriver(new URL("http://hub.browserstack.com/wd/hub"), caps);
+		MobileDriverFactory.setDriver(driver)
 
-		driver = new RemoteWebDriver(new URL("http://hub.browserstack.com/wd/hub"), caps);
+		//driver = new RemoteWebDriver(new URL("http://hub.browserstack.com/wd/hub"), caps);
 
-		DriverFactory.changeWebDriver(driver)
+		//DriverFactory.changeWebDriver(driver)
 		//println '-------- driver = ' + driver
 	}
 }

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>EarnDollars</name>
+   <name>logoutLink</name>
    <tag></tag>
-   <elementGuidId>0a44b49d-191c-4f66-8039-5db9e44c998c</elementGuidId>
+   <elementGuidId>3a4db998-7001-4061-9cd9-174155d829fb</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//p[text()='Log Out']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@class='item-pop-first MuiBox-root css-c3vlm2'][1]/div[3]/h6</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

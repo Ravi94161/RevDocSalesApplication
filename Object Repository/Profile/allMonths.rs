@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>EarnDollars</name>
+   <name>allMonths</name>
    <tag></tag>
-   <elementGuidId>0a44b49d-191c-4f66-8039-5db9e44c998c</elementGuidId>
+   <elementGuidId>a51390cd-e43e-43e8-9277-770f11ebbee3</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//ul[@role='listbox']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@class='item-pop-first MuiBox-root css-c3vlm2'][1]/div[3]/h6</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

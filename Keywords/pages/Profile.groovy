@@ -6,6 +6,12 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
+import java.text.Normalizer
+import java.text.SimpleDateFormat
+import java.time.DateTimeException
+import java.time.LocalDate
+import java.time.LocalDateTime
+
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
@@ -19,6 +25,7 @@ import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.testcase.TestCase
 import com.kms.katalon.core.testdata.TestData
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
+import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.common.WebUiCommonHelper
@@ -29,18 +36,25 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import groovy.beans.ListenerList
 import groovy.json.internal.ValueList
 import internal.GlobalVariable
+import utility.Verify
 
 public class Profile {
+
+	Verify verify = new Verify()
+	Global global = new Global()
+	WebDriver driver = DriverFactory.getWebDriver()
 
 	@Keyword
 	def clickOnGoals() {
 		TestObject goals = findTestObject('Object Repository/Profile/button_Goals');
+		verify.verifyElementClickable(goals, "Goals element is not clickable...")
 		WebUI.click(goals);
 	}
 
 	@Keyword
 	def clickOnPayment() {
 		TestObject payment = findTestObject('Object Repository/Profile/button_Payment');
+		verify.verifyElementClickable(payment, "payment element is not clickable...")
 		WebUI.click(payment);
 	}
 
@@ -57,23 +71,107 @@ public class Profile {
 	}
 
 	@Keyword
+	def normalize(value) {
+		return Normalizer.normalize(value, Normalizer.Form.NFD).replaceAll("\\p{M}", "").toLowerCase()
+	}
+
+	@Keyword
 	def verifyRecordAddedToMonthlySales() {
 
-		WebDriver driver = DriverFactory.getWebDriver()
-		List<String> valueList = new ArrayList<>()
-		// Locate elements by XPath
-		List<WebElement> elements = driver.findElements(By.xpath("//div[@class='item-pop-first MuiBox-root css-c3vlm2'][1]//div//h6"))
-		for (WebElement element : elements) {
-			valueList.add(element.getText())
-		}
-		TestObject nameOBJ = findTestObject('Object Repository/Profile/InvitedPersonName')
-		String name = WebUI.getText(nameOBJ);
-		TestObject earnedDollars = findTestObject('Object Repository/Profile/EarnDollars')
-		String dollars = WebUI.getText(earnedDollars)
-		if(name.equals(elements.get(2)) && dollars.equals(elements.get(4))) {
-			println("Record added to payments tab.....")
+		//WebDriver driver = DriverFactory.getWebDriver()
+
+		TestObject monthDropdown = findTestObject('Object Repository/Profile/div_MonthDropdown')
+		global.chooseCurrentMonth(monthDropdown)
+		global.storeDetailsUnderPaymentToListAndVerify()
+	}
+
+	@Keyword
+	def clickOnXButton() {
+
+		TestObject closeButtonOBJ =  findTestObject('Object Repository/Profile/button_X')
+		WebUI.click(closeButtonOBJ)
+	}
+
+	@Keyword
+	def getOverrideAmountBeforEvent() {
+
+		TestObject monthDropdown = findTestObject('Object Repository/Profile/div_MonthDropdown')
+		global.chooseCurrentMonth(monthDropdown)
+		//get override value and store it in default profile
+		TestObject overrideTextOBJ = findTestObject('Object Repository/Profile/overrideTxt')
+		String dollarAmount = global.getOverrideValueBeforeEventAndStoreIt(overrideTextOBJ)
+		return dollarAmount
+
+	}
+
+	@Keyword
+	def verifyOverrideAmountAfterEvent(String overrideAmountBeforeEvent) {
+		TestObject monthDropdown = findTestObject('Object Repository/Profile/div_MonthDropdown')
+		global.chooseCurrentMonth(monthDropdown)
+		TestObject overrideTextOBJ = findTestObject('Object Repository/Profile/overrideTxt')
+		global.verifyOverrideValueAfterEventAddedOrNot(overrideTextOBJ,overrideAmountBeforeEvent)
+	}
+
+	@Keyword
+	def getPointsFromProfileTabStoreIt() {
+
+		TestObject pointsOBJ = findTestObject('Object Repository/Profile/pointsOnProfile')
+		int points = WebUI.getText(pointsOBJ).toInteger()
+		println(points)
+		return points
+	}
+
+	@Keyword
+	def verifyPointsAddedAfterEvent(int points) {
+
+		TestObject pointsOBJ = findTestObject('Object Repository/Profile/pointsOnProfile')
+		global.verifyPointsAddedAfterEvent(pointsOBJ,points)
+	}
+
+	@Keyword
+	def getCurrentMonthGoalsAndStoreGoals() {
+		TestObject monthDropdownOBJ = findTestObject('Object Repository/Profile/div_MonthDropdown')
+		global.chooseCurrentMonth(monthDropdownOBJ)
+		TestObject goalsOBJ = findTestObject('Object Repository/Profile/goalCount')
+		String goalsCount = WebUI.getText(goalsOBJ)
+		TestObject myProgressOBJ = findTestObject('Object Repository/Profile/myProgress')
+		String myProgressCount = WebUI.getText(myProgressOBJ)
+		TestObject reachedStatusOBJ = findTestObject('Object Repository/Profile/reachedStatus')
+		String reachedCount = WebUI.getText(reachedStatusOBJ)
+		List<String> goalsData = new ArrayList()
+		goalsData.add(goalsCount)
+		goalsData.add(myProgressCount)
+		goalsData.add(reachedCount)
+		println(goalsData)
+		List<Integer> goalsValues = global.getGoalValuesOfAnEvent(goalsData)
+		println(goalsValues)
+		return goalsValues
+	}
+
+	@Keyword
+	def selectCurrentMonthVerifyGoalsUpdatedOrNot(List<Integer> goalsValuesBeforeEvent) {
+
+		TestObject monthDropdownOBJ = findTestObject('Object Repository/Profile/div_MonthDropdown')
+		global.chooseCurrentMonth(monthDropdownOBJ)
+		TestObject goalsOBJ = findTestObject('Object Repository/Profile/goalCount')
+		TestObject myProgressOBJ = findTestObject('Object Repository/Profile/myProgress')
+		TestObject reachedStatusOBJ = findTestObject('Object Repository/Profile/reachedStatus')
+		global.verifyGoalsUpdatedOrNot(goalsOBJ, myProgressOBJ, reachedStatusOBJ, goalsValuesBeforeEvent)
+		
+		/*int goalsCount = WebUI.getText(goalsOBJ).toInteger()
+		int myProgressCount = WebUI.getText(myProgressOBJ).toInteger()
+		int reachedCount = WebUI.getText(reachedStatusOBJ).toInteger()
+		//myProgressCount == goalsValuesBeforeEvent[1] +1
+		verify.verifyIsEqual(myProgressCount, goalsValuesBeforeEvent[1] +1, "Goals not added.....")
+		println(goalsValuesBeforeEvent[1] +1)
+		if(myProgressCount >= goalsCount) {
+			//reachedCount == goalsValuesBeforeEvent[3] + 1
+			verify.verifyIsEqual(reachedCount, (goalsValuesBeforeEvent[2] +1), "Goals not added.....")
+			println(goalsValuesBeforeEvent[2] +1)
 		}else {
-			throw new Exception("Record is not added.....")
-		}
+			//reachedCount == goalsValuesBeforeEvent[3] - 1
+			verify.verifyIsEqual(reachedCount, (goalsValuesBeforeEvent[2] -1), "Goals not added.....")
+			println(goalsValuesBeforeEvent[2] -1)
+		}*/
 	}
 }

@@ -17,7 +17,7 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>0</initValue>
-      <name>leaderboardPoints</name>
+      <name>salesAppPoints</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -1172,6 +1172,66 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>'https://stage.sales.revdoc.link/'</initValue>
-      <name>appURL</name>
+      <name>salesAppURL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue></initValue>
+      <name>invitedMemberPersonName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue></initValue>
+      <name>eventType</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'$5'</initValue>
+      <name>dollarAmount</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'ravi.kumar+2050@qualitlabs.com'</initValue>
+      <name>salesUserEmail</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'RevDoc@6'</initValue>
+      <name>salesUserPassword</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'8977942050'</initValue>
+      <name>salesUserMobileNumber</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'123456'</initValue>
+      <name>salesUserOTP</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'ravi.kumar+2062@qualitlabs.com'</initValue>
+      <name>parentSalesUserEmail</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'8977942062'</initValue>
+      <name>parentSalesUserMobileNumber</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Test@123'</initValue>
+      <name>parentSalesUserPassword</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>OverrideAmountBeforeEvent</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://revdoc.app.link/gMWtsXRuFPb'</initValue>
+      <name>parentUserInviteLink</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

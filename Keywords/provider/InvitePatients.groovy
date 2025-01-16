@@ -17,6 +17,7 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.sun.net.httpserver.Authenticator.Failure
 
 import internal.GlobalVariable
 import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory
@@ -133,7 +134,7 @@ public class InvitePatients {
 		tapOnMsgInputField()
 		typeInMsgInputField(deepLink)
 		tapOnSendSmsBtn()
-		Mobile.hideKeyboard()
+		Mobile.hideKeyboard(FailureHandling.OPTIONAL)
 		mob.tapOnElementByText(deepLink)
 	}
 

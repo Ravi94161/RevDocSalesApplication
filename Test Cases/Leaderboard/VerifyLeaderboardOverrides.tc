@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>T3</name>
+   <name>VerifyLeaderboardOverrides</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>9c9e367a-ebcb-4659-90bb-9f77546f303e</testCaseGuid>
+   <testCaseGuid>36fe31b1-3ccc-4ddb-8695-fa3e0958a05c</testCaseGuid>
 </TestCaseEntity>

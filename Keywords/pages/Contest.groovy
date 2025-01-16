@@ -22,4 +22,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 
 public class Contest {
+
+	Global global = new Global()
+
+	@Keyword
+	def clickOnHomeButton() {
+
+		TestObject homeLink = findTestObject('Object Repository/Dashboard/homeLink')
+		global.clickOnHomeButton(homeLink)
+	}
 }

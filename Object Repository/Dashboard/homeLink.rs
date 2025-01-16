@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>EarnDollars</name>
+   <name>homeLink</name>
    <tag></tag>
-   <elementGuidId>0a44b49d-191c-4f66-8039-5db9e44c998c</elementGuidId>
+   <elementGuidId>15e88742-5a88-4a3a-9d49-46caca4f80cc</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//span[text()='Home']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@class='item-pop-first MuiBox-root css-c3vlm2'][1]/div[3]/h6</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

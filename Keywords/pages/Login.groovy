@@ -27,59 +27,64 @@ public class Login {
 	Verify verify = new Verify();
 
 	@Keyword
-	def launchSalesApplication() {
+	def launchSalesApplication(String appURL) {
 		WebUI.openBrowser("");
 		WebUI.maximizeWindow();
-		WebUI.navigateToUrl(GlobalVariable.appURL);
+		WebUI.navigateToUrl(appURL);
 	}
 
 	@Keyword
-	def enterEmail() {
+	def enterEmail(String salesUserName) {
 		TestObject emailTextBox = findTestObject('Object Repository/Login/input_Email Address_email');
 		verify.verifyElementPresent(emailTextBox, "Email textbox not found...");
-		WebUI.setText(emailTextBox, "ravi.kumar+2050@qualitlabs.com");
+		WebUI.setText(emailTextBox, salesUserName);
 	}
 
 	@Keyword
-	def enterPassword() {
+	def enterPassword(String salesUserPassword) {
 		TestObject passwordTextBox = findTestObject('Object Repository/Login/input_Password_password');
 		verify.verifyElementPresent(passwordTextBox, "password textbox not found...");
-		WebUI.setText(passwordTextBox, "RevDoc@6");
+		WebUI.setText(passwordTextBox, salesUserPassword);
 	}
 
 	@Keyword
 	def clickOnLoginButton() {
 		TestObject btnLogin = findTestObject('Object Repository/Login/button_Log In');
-		verify.verifyElementPresent(btnLogin, "login button not found...");
+		verify.verifyElementClickable(btnLogin, "login button not found...")
 		WebUI.click(btnLogin);
 	}
 
 	@Keyword
-	def enterMobileNumber() {
+	def enterMobileNumber(String salesUserPhoneNumber) {
 		TestObject phoneNumberTextBox = findTestObject('Object Repository/Login/input_Mobile Number_mobilePhoneNumber');
 		verify.verifyElementPresent(phoneNumberTextBox, "phonenumber textbox not found...");
-		WebUI.setText(phoneNumberTextBox, '8977942050');
+		WebUI.setText(phoneNumberTextBox, salesUserPhoneNumber);
 	}
 
 	@Keyword
 	def clickOnSendOTP() {
 		TestObject sendOTPButton = findTestObject('Object Repository/Login/button_Send OTP');
-		verify.verifyElementPresent(sendOTPButton, "send OTP button not found...");
+		verify.verifyElementClickable(sendOTPButton, "send OTP button not found...");
 		WebUI.click(sendOTPButton)
 	}
 
 	@Keyword
-	def enterOTP() {
+	def enterOTP(String loginOTP) {
 		TestObject enterOTP = findTestObject('Object Repository/Login/input_OTP_user_input_code');
 		verify.verifyElementPresent(enterOTP, "enter OTP textbox not found...");
-		WebUI.setText(enterOTP, '123456');
+		WebUI.setText(enterOTP, loginOTP);
 	}
 
 	@Keyword
 	def clickOnVerifyOTPButton() {
 		TestObject verifyOTP = findTestObject('Object Repository/Login/button_Verify OTP');
-		verify.verifyElementPresent(verifyOTP, "Verify OTP button not found...");
+		verify.verifyElementClickable(verifyOTP, "Verify OTP button not found...");
 		WebUI.click(verifyOTP);
+	}
+
+	@Keyword
+	def closeBrowser() {
+		WebUI.closeBrowser()
 	}
 }
 

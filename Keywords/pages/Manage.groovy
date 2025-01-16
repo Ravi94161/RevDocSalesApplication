@@ -1,4 +1,4 @@
-package memberAppEvents
+package pages
 
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
@@ -21,5 +21,14 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
 
-public class MemberAppSales {
+public class Manage {
+	
+	@Keyword
+	def clickOnLogOut() {
+		
+		TestObject logoutLink = findTestObject('Object Repository/Manage/logoutLink')
+		WebUI.click(logoutLink)
+		
+	}
+	
 }

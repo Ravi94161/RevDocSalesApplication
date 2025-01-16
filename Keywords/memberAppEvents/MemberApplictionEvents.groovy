@@ -20,6 +20,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
+import member.HomePage
 import member.Login
 import memberSignUp.SignUp
 import mobile.Generic
@@ -36,9 +37,11 @@ public class MemberApplictionEvents {
 		InvitePatients invitePatients = new InvitePatients()
 		SignUp signUp = new SignUp()
 		MobileActions mobileActions = new MobileActions()
+		HomePage homepage = new HomePage()
+		GlobalVariable.eventType ='Member Registration'
 
 
-		def salesDeepLink = "https://revdoc.app.link/gMWtsXRuFPb"
+		def salesDeepLink = GlobalVariable.parentUserInviteLink
 		def iterations = 1
 
 		List<List<String>> data = [["Email", "PhoneNumber", "FirstName", "LastName"]]
@@ -52,7 +55,7 @@ public class MemberApplictionEvents {
 				def fullAddress = GlobalVariable.searchAddress
 				def race = "Asian"
 				def zipCode = "48867"
-				login.launchMemberAppAndroid()
+				//login.launchMemberAppAndroid()
 				Mobile.pressHome()
 				invitePatients.sendDeepLinkThroughMsgs(salesDeepLink)
 
@@ -77,6 +80,13 @@ public class MemberApplictionEvents {
 				Mobile.pressBack(FailureHandling.OPTIONAL)
 				signUp.tapOnContinueBtn();
 				Mobile.delay(5);
+				GlobalVariable.eventType ='Member Registration'
+				GlobalVariable.invitedMemberPersonName = firstName + " " + middleName + " " + lastName
+
+				//homepage.verifyHomePageIcon()
+				//homepage.tapOnHomePageIcon()
+
+
 			} catch (Exception e) {
 				println "Error during iteration $i: ${e.message}"
 				ArrayList<String> arr = new ArrayList<String>(Arrays.asList("Error", "Error", "Error", "Error"));
