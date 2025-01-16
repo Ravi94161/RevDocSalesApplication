@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>VerifyLeaderboardGoalsUpdatingWhenWeDoAnyEvent</name>
+   <name>VerifyContestGoalsUpdatingForSaleEvent</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>b4924b5b-7b8d-4a78-ae60-7d571176ba80</testCaseGuid>
+   <testCaseGuid>4f2af1a5-ca04-4ffe-bf47-2c9029293b4a</testCaseGuid>
 </TestCaseEntity>
