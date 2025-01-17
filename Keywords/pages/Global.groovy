@@ -20,7 +20,6 @@ public class Global {
 
 	WebDriver driver = DriverFactory.getWebDriver()
 	Verify verify = new Verify()
-	List<String> valueList
 
 	@Keyword
 	def chooseCurrentMonth(TestObject monthDropdown) {
@@ -96,25 +95,41 @@ public class Global {
 	@Keyword
 	def storeDetailsUnderPaymentToListAndVerify() {
 
-		storeDetailsFromPaymentsTabAsList()
-		verifyStoredValuesInListWithRegistrationTimeValues()
+		List<String> valueList = storeDetailsFromPaymentsTabAsList()
+		verifyStoredValuesInListWithRegistrationTimeValues(valueList)
 
 	}
 
 	@Keyword
 	def storeDetailsFromPaymentsTabAsList() {
 
-		valueList = new ArrayList<>()
+		List<String> valueList = new ArrayList<>()
 		// Locate elements by XPath
 		List<WebElement> elements = driver.findElements(By.xpath("//div[@class='item-pop-first MuiBox-root css-c3vlm2'][1]/div/h6"))
 		for (WebElement element : elements) {
 			valueList.add(element.getText())
 		}
 		println(valueList)
+
+		return valueList
+	}
+	
+	@Keyword
+	def storeDetailsFromLimitsExceededPaymentsTabAsList() {
+
+		List<String> valueList = new ArrayList<>()
+		// Locate elements by XPath
+		List<WebElement> elements = driver.findElements(By.xpath("//div[@class='item-pop-first MuiBox-root css-gsiris'][1]/div/h6"))
+		for (WebElement element : elements) {
+			valueList.add(element.getText())
+		}
+		println(valueList)
+
+		return valueList
 	}
 
 	@Keyword
-	def verifyStoredValuesInListWithRegistrationTimeValues() {
+	def verifyStoredValuesInListWithRegistrationTimeValues(List<String> valueList) {
 		// Create a SimpleDateFormat with the desired pattern
 		def sdf = new SimpleDateFormat("MM/dd")
 		// Get the current date and format it
@@ -170,7 +185,7 @@ public class Global {
 		println(pointsBeforeEvent)
 		verify.verifyIsEqual(pointsAfterEvent, pointsBeforeEvent , "Points not added for event")
 	}
-	
+
 	@Keyword
 	def getGoalValuesOfAnEvent(List<String> goalsData) {
 		List<Integer> goalsValues = new ArrayList()
@@ -180,7 +195,7 @@ public class Global {
 		}
 		return goalsValues
 	}
-	
+
 	@Keyword
 	def verifyGoalsUpdatedOrNot(TestObject goalsOBJ, TestObject myProgressOBJ, TestObject reachedStatusOBJ, List<Integer> goalsValuesBeforeEvent) {
 		int goalsCount = WebUI.getText(goalsOBJ).toInteger()
@@ -198,6 +213,47 @@ public class Global {
 			verify.verifyIsEqual(reachedCount, (goalsValuesBeforeEvent[2] -1), "Goals not added.....")
 			println(goalsValuesBeforeEvent[2] -1)
 		}
+	}
+
+	@Keyword
+	def verifyLimitsFeatureInPaymetsProfile(TestObject monthDropdown, TestObject limitsText, TestObject saleRecord) {
+
+		chooseCurrentMonth(monthDropdown)
+		List<String> valueList = storeDetailsFromLimitsExceededPaymentsTabAsList()
+		println(valueList)
+		verifyDollorLimited(valueList)
+		verifyColorAndMessage(limitsText, saleRecord)
+
+	}
+
+	@Keyword
+	def verifyDollorLimited(List<String> valueList) {
+
+		// Create a SimpleDateFormat with the desired pattern
+		def sdf = new SimpleDateFormat("MM/dd")
+		// Get the current date and format it
+		String currentDate = sdf.format(new Date())
+
+		String iMP = GlobalVariable.invitedMemberPersonName
+		String eT = GlobalVariable.eventType
+		String dA = GlobalVariable.dollarAmount
+		verify.verifyTextMatch(valueList.get(0), currentDate, "date not matched....")
+		verify.verifyTextMatch(valueList.get(1), iMP, "invited sales person name not matched....")
+		verify.verifyTextMatch(valueList.get(2), eT, "event type not matched....")
+		verify.verifyTextContains(valueList.get(3), "dollar amount not matched....")
+		//verify.verifyTextMatch(valueList.get(3), '$0', "dollar amount not matched....")
+
+	}
+
+	@Keyword
+	def verifyColorAndMessage(TestObject limitsText, TestObject saleRecord) {
+		String text = WebUI.getText(limitsText)
+		println(text)
+		verify.verifyTextMatch(text, "*You have reached the max number of leaderboard/contest dollars for this goal this month.", "Limits exceeded text validation failed.....")
+
+		String backgroundColor = WebUI.getCSSValue(saleRecord, 'background-color')
+		println(backgroundColor)
+		verify.verifyTextMatch(backgroundColor, "rgba(255, 225, 214, 1)", "background color not matched for limits exceeded records.....")
 	}
 
 }

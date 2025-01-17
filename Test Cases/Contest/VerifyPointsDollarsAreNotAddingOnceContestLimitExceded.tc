@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VerifyPointsDollarsAreNotAddingOnceContestLimitExceded</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f2288145-6599-4e2a-8d7c-508febdadcc7</testCaseGuid>
+</TestCaseEntity>

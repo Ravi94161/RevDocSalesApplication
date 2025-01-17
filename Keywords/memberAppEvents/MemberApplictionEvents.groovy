@@ -41,7 +41,7 @@ public class MemberApplictionEvents {
 		GlobalVariable.eventType ='Member Registration'
 
 
-		def salesDeepLink = GlobalVariable.parentUserInviteLink
+		def salesDeepLink = "https://revdoc.app.link/ZBae4h5JcQb"
 		def iterations = 1
 
 		List<List<String>> data = [["Email", "PhoneNumber", "FirstName", "LastName"]]

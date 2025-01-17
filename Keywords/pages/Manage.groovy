@@ -22,13 +22,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 
 public class Manage {
-	
+
 	@Keyword
 	def clickOnLogOut() {
-		
+
 		TestObject logoutLink = findTestObject('Object Repository/Manage/logoutLink')
 		WebUI.click(logoutLink)
-		
 	}
-	
 }

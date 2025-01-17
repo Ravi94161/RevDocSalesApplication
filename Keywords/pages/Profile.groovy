@@ -46,6 +46,7 @@ public class Profile {
 
 	@Keyword
 	def clickOnGoals() {
+
 		TestObject goals = findTestObject('Object Repository/Profile/button_Goals');
 		verify.verifyElementClickable(goals, "Goals element is not clickable...")
 		WebUI.click(goals);
@@ -53,6 +54,7 @@ public class Profile {
 
 	@Keyword
 	def clickOnPayment() {
+
 		TestObject payment = findTestObject('Object Repository/Profile/button_Payment');
 		verify.verifyElementClickable(payment, "payment element is not clickable...")
 		WebUI.click(payment);
@@ -60,25 +62,26 @@ public class Profile {
 
 	@Keyword
 	def clickOnStatus() {
+
 		TestObject status = findTestObject('Object Repository/Profile/button_Status');
 		WebUI.click(status);
 	}
 
 	@Keyword
 	def clickOnMySales() {
+
 		TestObject mySales = findTestObject('Object Repository/Profile/button_My Sales');
 		WebUI.click(mySales);
 	}
 
 	@Keyword
 	def normalize(value) {
+
 		return Normalizer.normalize(value, Normalizer.Form.NFD).replaceAll("\\p{M}", "").toLowerCase()
 	}
 
 	@Keyword
 	def verifyRecordAddedToMonthlySales() {
-
-		//WebDriver driver = DriverFactory.getWebDriver()
 
 		TestObject monthDropdown = findTestObject('Object Repository/Profile/div_MonthDropdown')
 		global.chooseCurrentMonth(monthDropdown)
@@ -106,6 +109,7 @@ public class Profile {
 
 	@Keyword
 	def verifyOverrideAmountAfterEvent(String overrideAmountBeforeEvent) {
+
 		TestObject monthDropdown = findTestObject('Object Repository/Profile/div_MonthDropdown')
 		global.chooseCurrentMonth(monthDropdown)
 		TestObject overrideTextOBJ = findTestObject('Object Repository/Profile/overrideTxt')
@@ -130,6 +134,7 @@ public class Profile {
 
 	@Keyword
 	def getCurrentMonthGoalsAndStoreGoals() {
+
 		TestObject monthDropdownOBJ = findTestObject('Object Repository/Profile/div_MonthDropdown')
 		global.chooseCurrentMonth(monthDropdownOBJ)
 		TestObject goalsOBJ = findTestObject('Object Repository/Profile/goalCount')
@@ -157,21 +162,20 @@ public class Profile {
 		TestObject myProgressOBJ = findTestObject('Object Repository/Profile/myProgress')
 		TestObject reachedStatusOBJ = findTestObject('Object Repository/Profile/reachedStatus')
 		global.verifyGoalsUpdatedOrNot(goalsOBJ, myProgressOBJ, reachedStatusOBJ, goalsValuesBeforeEvent)
-		
-		/*int goalsCount = WebUI.getText(goalsOBJ).toInteger()
-		int myProgressCount = WebUI.getText(myProgressOBJ).toInteger()
-		int reachedCount = WebUI.getText(reachedStatusOBJ).toInteger()
-		//myProgressCount == goalsValuesBeforeEvent[1] +1
-		verify.verifyIsEqual(myProgressCount, goalsValuesBeforeEvent[1] +1, "Goals not added.....")
-		println(goalsValuesBeforeEvent[1] +1)
-		if(myProgressCount >= goalsCount) {
-			//reachedCount == goalsValuesBeforeEvent[3] + 1
-			verify.verifyIsEqual(reachedCount, (goalsValuesBeforeEvent[2] +1), "Goals not added.....")
-			println(goalsValuesBeforeEvent[2] +1)
-		}else {
-			//reachedCount == goalsValuesBeforeEvent[3] - 1
-			verify.verifyIsEqual(reachedCount, (goalsValuesBeforeEvent[2] -1), "Goals not added.....")
-			println(goalsValuesBeforeEvent[2] -1)
-		}*/
 	}
+
+	def verifyPointsAndDollarsNotAddingOnceLimitExceeded(int points) {
+	 TestObject pointsOBJ = findTestObject('Object Repository/Profile/pointsOnProfile')
+	 int pointsAfterEvents = WebUI.getText(pointsOBJ).toInteger()
+	 if(points == 0) {
+	 verify.verifyIsEqual(pointsAfterEvents, points+5, "Points limits feature is not working fine in leaderboard.....")
+	 }else {
+	 verify.verifyIsEqual(pointsAfterEvents, points, "Points limits feature is not working fine in leaderboard.....")
+	 }
+	 clickOnPayment()
+	 TestObject monthDropdown = findTestObject('Object Repository/Profile/div_MonthDropdown')
+	 TestObject limitsText = findTestObject('Object Repository/Profile/limitsText')
+	 TestObject saleRecord = findTestObject('Object Repository/Profile/salesDataField')
+	 global.verifyLimitsFeatureInPaymetsProfile(monthDropdown, limitsText, saleRecord)
+	 }
 }
